@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2MOD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="Main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav>
+            <i class="fa fa-bars" id="menubtn" onclick="showmenu()"></i>
+            <a href=""><img src="D:\PhotoShop\Mod Logo\Mod Logo.png" alt="Logo" class="logo"></a>
+            <div class = "nav-links">
+                <i onclick="hidemenu()" class="fa-sharp fa-solid fa-xmark" id="closebtn"></i>
+                <ul>
+                    <li><a href="Main.html">Home</a>
+                    <li><a href="Main.html">About</a>
+                    <li><a href="">Portfolio</a>
+                    <li><a href="Contact.html">Contact</a>
+                </ul>
+            </div>
+        </nav>
+        <div class="Cover">
+            <h2>Portfolio</h2>
+        </div>
+        <section class="pt-content">
+            <div class="pt-videos">
+                <h2>Videos</h2>
+                <div class="pt-row">
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/776296457?h=d0dadce82d"  frameborder="0"    allowfullscreen></iframe></div>
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/741395583?h=3e32590487"  frameborder="0"    allowfullscreen></iframe></div>
+                </div>
+                <div class="pt-row">
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/735430824?h=24b9fedb58"  frameborder="0"    allowfullscreen=></iframe></div>
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/736198983?h=8174728e85"  frameborder="0"    allowfullscreen=></iframe></div>
+                </div>
+                <div class="pt-row">
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/741386506?h=c3ed02f1c7"  frameborder="0"    allowfullscreen =></iframe></div>
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/729706217?h=19ffa00b81"  frameborder="0"    allowfullscreen></iframe></div>
+                </div>
+                <div class="pt-row">
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/734296705?h=8ce2442518"  frameborder="0"    allowfullscreen></iframe></div>
+                    <div class = "holder"><iframe title="vimeo-player" src="https://player.vimeo.com/video/734295189?h=6ab3d6c4cb"  frameborder="0"    allowfullscreen></iframe></div>
+                    
+                </div>
+            </div>
+            <div class="pt-albums">
+                <h2>Albums</h2>
+                <div class="pt-row">
+                    <div class="pt-col">
+                        <img src="Gallery/IMG_11.jpg"></a>
+                        <div class="layer">
+                            <h3>Cairo</h3>
+                        </div>
+                    </div>
+                    <div class="pt-col">
+                        <img src="Gallery/IMG_10.jpg">
+                        <div class="layer">
+                            <h3>Saqqara</h3>
+                        </div>
+                    </div>
+                    <div class="pt-col">
+                        <img src="Gallery/IMG_09.jpg">
+                        <div class="layer">
+                            <h3>Port-Said</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h6>Copyright © 2MOD. All rights reserved.</h6>
+                <p>The Content in this Website is all done by the 2MOD and downloading these contents in any illegal way is an Infringement of property rights.</p>
+                <p style="font-family: SharpSans;font-size: 12px;">Contact <a href="Contact.html">Here</a></p>
+            </div>
+        </footer>
+    </body>
+    <script>
+        const checkbtn = document.querySelector('#menubtn')
+        const menu = document.querySelector('nav .nav-links')
+        const showmenu = function(){
+            menu.style["left"] = "40%";
+        }
+        const hidemenu = function(){
+            menu.style["left"] = "100%";
+        }
+    </script>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>2MOD</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-sclae=1.0">
+        <link rel="stylesheet" href="Main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <nav>
+            <i class="fa fa-bars" id="menubtn" onclick="showmenu()"></i>
+            <a href=""><img src="D:\PhotoShop\Mod Logo\Mod Logo.png" alt="Logo" class="logo"></a>
+            <div class = "nav-links">
+                <i onclick="hidemenu()" class="fa-sharp fa-solid fa-xmark" id="closebtn"></i>
+                <ul>
+                    <li><a href="">Home</a>
+                    <li><a href="#about">About</a>
+                    <li><a href="Portfolio.html">Portfolio</a>
+                    <li><a href="Contact.html">Contact</a>
+                </ul>
+            </div>
+        </nav>
+        <section class ="home">
+            <div class = "content">
+                <p  style = "font-size: 30px; color: #ffea00;" class ="title">Hello From</p>
+                <p  style = "font-size: 50px;" class="title">Modather Brothers</p>
+                <p>We are two brothers who are passionate about filmaking and photography and here<br> you can find all of our previous work and know more about us.</p>
+                <button class = "btn"><a href="Contact.html">Contact Us</a></button>
+                <p class="title2">Our Platforms:</p>
+                <ul class="logos">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a>
+                    <li><a href=""><i class="fa-brands fa-vimeo"></i></a>
+                </ul>
+            </div>
+        </section>
+        <section class ="about" id="about">
+            <div class="about-row" >
+                <div class = "about-col">
+                    <h2>We are Filmmakers</h2>
+                    <p>We are two brothers from Egypt located in Cairo who share their passion about Filmmaking through taking clips and editing them and add some sound effects
+                    with color grading to produce an excellent video we have made a lot of projects where you can check them on our portfolio.<br>
+                    We started our learning journey from Youtube tutorials and we made a lot of videos in freelancing platforms and then started our Youtube Channel<br> 
+                    We are very passionate about travelling and you can see some photos we take from places we visit.<br>
+                    Abdelrahman Modather is a Computer Engineer and a Professional Web developer.<br>
+                    Mohamed Modather is a Chinese translator and Professional digital marketer.</p>
+                </div>
+                <div class = "about-col">
+                    <img src="About.jpg" alt="Mod">
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <h2>Our Gallery</h2>
+            <div class="slider-cont">
+                <i class="fa-solid fa-angle-left" id="backbtn"></i>
+                <div class = "slider">
+                    <div>
+                        <span><img src="gallery/IMG_01.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_02.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_03.jpg" alt=""></span>
+                    </div>
+                    <div>
+                        <span><img src="gallery/IMG_04.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_05.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_06.jpg" alt=""></span>
+                    </div>
+                    <div id="last-slider">
+                        <span><img src="gallery/IMG_07.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_08.jpg" alt=""></span>
+                        <span><img src="gallery/IMG_09.jpg" alt=""></span>
+                    </div>
+                </div>
+                <i class="fa-solid fa-angle-right" id ="nextbtn"></i>
+            </div>
+            <div class = "explore">
+                <h2>Explore Full Gallery Here:</h2>
+                <button class = "btn"><a href="Portfolio.html">Portfolio</a></button>
+            </div>
+        </section>
+        <footer>
+            <div>
+                <h6>Copyright © 2MOD. All rights reserved.</h6>
+                <p>The Content in this Website is all done by the 2MOD and downloading these contents in any illegal way is an Infringement of property rights.</p>
+                <p style="font-family: SharpSans;font-size: 12px;">Contact <a href="Contact.html">Here</a></p>
+            </div>
+        </footer>
+        <script>
+            const checkbtn = document.querySelector('#menubtn')
+            const menu = document.querySelector('nav .nav-links')
+            const showmenu = function(){
+                menu.style["left"] = "40%";
+            }
+            const hidemenu = function(){
+                menu.style["left"] = "100%";
+            }
+            // Gallery Code
+            let scrollContainer = document.querySelector('.gallery .slider');
+            let backbtn = document.querySelector('#backbtn');
+            let nextbtn = document.querySelector('#nextbtn');
+
+            scrollContainer.addEventListener("wheel" , (evt) => {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+            })
+            nextbtn.addEventListener("click",() => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft += scrollContainer.offsetWidth;
+            })
+            backbtn.addEventListener("click",() => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft -= scrollContainer.offsetWidth;
+            })
+        </script>
+    </body>
+</html>
